@@ -3,11 +3,11 @@
 
 int main(void) {
 
-    int number[100] = {0}; // 設定一個元素數量為100的「int」陣列
-    int amount = 0; // 輸入的數字數量，同時兼具陣列的元素位置
+    int number[100] = {0}; // 存輸入數值
+    int amount = 0; // 看總共輸入了幾個
     for (amount = 0; amount < 100; amount += 1) {
         int flag = scanf("%d", &number[amount]); // 輸入數字
-        // 輸入「EOF」時，代表輸入結束
+        // EOF ,值會回傳-1
         if (flag == EOF) {
             break;
         }
