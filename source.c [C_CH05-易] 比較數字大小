@@ -1,26 +1,27 @@
-#include <iostream>  
-using namespace std;
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 
-
-int main() {
-    int a, b, c;
-    while (cin >> a >> b >> c)
+int main(void) 
+{
+	int a, b,c;
+    int flag; 
+	while ((flag =scanf("%d %d %d", &a, &b, &c) ) != EOF)
     {
         if (a > b)
         {
             if (b > c) //a > b > c  
             {
-                cout << a << ">" << b << ">" << c << endl;
+                printf("%d>%d>%d\n", a, b, c);
             }
             else
             {
                 if (a > c) //a > c > b  
                 {
-                    cout << a << ">" << c << ">" << b << endl;
+                    printf("%d>%d>%d\n", a, c, b);
                 }
                 else //c > a > b  
                 {
-                    cout << c << ">" << a << ">" << b << endl;
+                    printf("%d>%d>%d\n", c, a, b);
                 }
             }
         }
@@ -28,20 +29,21 @@ int main() {
         {
             if (a > c) //b > a > c  
             {
-                cout << b << ">" << a << ">" << c << endl;
+                printf("%d>%d>%d\n", b, a, c);
             }
             else //b, c > a  
             {
                 if (b > c) //b > c > a  
                 {
-                    cout << b << ">" << c << ">" << a << endl;
+                    printf("%d>%d>%d\n", b, c, a);
                 }
                 else //c > b > a  
                 {
-                    cout << c << ">" << b << ">" << a << endl;
+                    printf("%d>%d>%d\n", c, b, a);
                 }
             }
         }
-    }
+	}
     return 0;
+	
 }
