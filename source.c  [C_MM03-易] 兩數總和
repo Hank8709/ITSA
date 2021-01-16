@@ -1,0 +1,16 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void) 
+{
+	int a, b,c;
+    int flag; 
+	while ((flag = scanf("%d %d ", &a, &b)) != EOF)
+	{
+		int result = a + b;
+		printf("%d\n",result);
+	}
+    
+    return 0;
+	
+}
